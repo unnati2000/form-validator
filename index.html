@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <form>
-
-        </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <div class="form-div">
+      <form class="form">
+        <div class="name-div">
+          <input type="text" placeholder="Enter your first name" class="name" />
+          <input type="text" placeholder="Enter your last name" class="name" />
+        </div>
+        <div class="radio">
+          <div class="radio-button">
+            <input type="radio" id="male" name="male" value="male" />
+            <label for="male">Male</label><br />
+          </div>
+          <div class="radio-button">
+            <input type="radio" id="female" name="female" value="female" />
+            <label for="female">Female</label><br />
+          </div>
+        </div>
+        <div class="course">
+          <select name="cars" id="cars" class="course-option">
+            <option value="volvo" class="option">Volvo</option>
+            <option value="saab" class="option">Saab</option>
+            <option value="mercedes" class="option">Mercedes</option>
+            <option value="audi" class="option">Audi</option>
+          </select>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
