@@ -10,12 +10,27 @@
   <body>
     <div class="form-div">
       <form class="form">
-        <input type="email" placeholder="Email" class="name" />
-        <input type="password" placeholder="Password" class="name" />
-        <input type="password" placeholder="Confirm Password" class="name" />
+        <h2 class="sign-up">Sign Up</h2>
+        <input type="email" placeholder="Email" id="email" class="name" />
+        <span id="email-error-div" class="error-div"></span>
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          class="name"
+        />
+        <span id="password-error-div" class="error-div"></span>
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          id="confirm-password"
+          class="name"
+        />
+        <span id="confirmpass-error-div" class="error-div"></span>
         <br />
-        <button class="button">Sign Up</button>
+        <button class="button" type="submit" id="sign-up">Sign Up</button>
       </form>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
