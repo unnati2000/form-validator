@@ -31,7 +31,7 @@ input {
   width: 70%;
   border: none;
   border-radius: 22px;
-
+  color: #777676;
   background: #383838;
   box-shadow: inset -36px 36px 72px #282828, inset 36px -36px 72px #484848;
   font-size: 15px;
@@ -110,4 +110,8 @@ input:focus {
 
 .error-div {
   color: red;
+}
+
+.agree {
+  color: #777676;
 }
