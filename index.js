@@ -1,44 +1,51 @@
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirm-password");
-const signUpButton = document.getElementById("sign-up");
-const emailErrorDiv = document.getElementById("email-error-div");
-const passwordErrorDiv = document.getElementById("password-error-div");
-const confirmPasswordErrorDiv = document.getElementById(
-  "confirmpass-error-div"
-);
+const formButton = document.getElementById("form-button");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const male = document.getElementById("male");
+const female = document.getElementById("female");
+const course = document.getElementById("course");
+const message = document.getElementById("message");
+const check = document.getElementById("check");
+const firstNameErrorDiv = document.getElementById("firstName-error-div");
+const lastNameErrorDiv = document.getElementById("lastName-error-div");
+const genderErrorDiv = document.getElementById("gender-error-div");
+const courseErrorDiv = document.getElementById("course-error-div");
+const messageErrorDiv = document.getElementById("message-error-div");
+const checkErrorDiv = document.getElementById("check-error-div");
 
-var mailformat =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-signUpButton.addEventListener("click", (e) => {
+formButton.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(email.value, password.value);
+  if (firstName.value === "") {
+    firstName.classList.add("error");
+    firstNameErrorDiv.innerText = "Enter your first Name";
+  } else if (firstName.value.length < 3) {
+    firstName.classList.add("error");
+    firstNameErrorDiv.innerText = "First Name is too short";
+  }
 
-  if (
-    email.value === "" ||
-    password.value === "" ||
-    confirmPassword.value === ""
-  ) {
-    console.log("first");
-    email.classList.add("error");
-    password.classList.add("error");
-    confirmPassword.classList.add("error");
-    emailErrorDiv.innerHTML = "Field Empty";
-    passwordErrorDiv.innerHTML = "Field Empty";
-    confirmPasswordErrorDiv.innerHTML = "Field Empty";
-  } else if (password.value.length < 6) {
-    password.classList.add("error");
-    passwordErrorDiv.innerHTML = "Length of password should be greater than 6";
-  } else if (password.value !== confirmPassword.value) {
-    confirmPassword.classList.add("error");
-    confirmPasswordErrorDiv.innerHTML =
-      "Password and confirm password should be same";
-  } else if (!email.value.match(mailformat)) {
-    email.classList.add("error");
-    emailErrorDiv.innerHTML = "Enter a proper email";
-  } else {
-    localStorage.setItem("email", email.value);
-    window.location.replace("/");
+  if (lastName.value === "") {
+    lastName.classList.add("error");
+    lastNameErrorDiv.innerText = "Enter your last Name";
+  } else if (lastName.value.length < 3) {
+    lastName.classList.add("error");
+    lastNameErrorDiv.innerText = "Last Name is too short";
+  }
+
+  if (male.checked === false && female.checked === false) {
+    genderErrorDiv.innerText = "Select your gender";
+  }
+
+  if (message.value === "") {
+    message.classList.add("error");
+    messageErrorDiv.innerText = "Enter your message";
+  }
+
+  if (course.value === "") {
+    course.classList.add("error");
+    courseErrorDiv.innerText = "Select the course";
+  }
+
+  if (check.checked === false) {
+    checkErrorDiv.innerText = "Please check this above box";
   }
 });

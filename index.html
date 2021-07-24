@@ -12,8 +12,20 @@
       <form class="form">
         <h1 class="agree">Enter your details</h1>
         <div class="name-div">
-          <input type="text" placeholder="Enter your first name" class="name" />
-          <input type="text" placeholder="Enter your last name" class="name" />
+          <input
+            type="text"
+            placeholder="Enter your first name"
+            id="firstName"
+            class="name"
+          /><br />
+          <span id="firstName-error-div" class="error-div"></span>
+          <input
+            type="text"
+            placeholder="Enter your last name"
+            id="lastName"
+            class="name"
+          /><br />
+          <span id="lastName-error-div" class="error-div"></span>
         </div>
         <div class="radio">
           <div class="radio-button">
@@ -25,22 +37,44 @@
             <label for="female">Female</label><br />
           </div>
         </div>
+        <span id="gender-error-div" class="error-div"></span>
         <div class="course">
-          <select name="cars" id="cars" class="course-option">
-            <option value="volvo" class="option">Volvo</option>
-            <option value="saab" class="option">Saab</option>
-            <option value="mercedes" class="option">Mercedes</option>
-            <option value="audi" class="option">Audi</option>
+          <select id="course" class="course-option">
+            <option value="">Choose your option</option>
+            <option value="Machine Learning" class="option">
+              Machine Learning
+            </option>
+            <option value="Cyber Security" class="option">
+              Cyber Security
+            </option>
+            <option value="Web development" class="option">
+              Web development
+            </option>
+            <option value="Data bases" class="option">Data bases</option>
           </select>
+          <br />
+          <span id="course-error-div" class="error-div"></span>
         </div>
-        <textarea placeholder="Message" class="name"></textarea><br />
-        <input type="checkbox" id="agree" />
-        <label for="agreement" class="agree"
-          >I agree with all the terms and conditions</label
+        <textarea
+          placeholder="Message"
+          class="name"
+          id="message"
+          class="error-div"
+        ></textarea
         ><br />
+        <span id="message-error-div" class="error-div"></span>
+        <br />
+        <div class="checkBox">
+          <input type="checkbox" id="check" />
+          <label for="agreement" class="agree"
+            >I agree with all the terms and conditions</label
+          ><br />
+          <span id="check-error-div" class="error-div"></span>
+        </div>
 
-        <button type="submit" class="button">Submit</button>
+        <button type="submit" id="form-button" class="button">Submit</button>
       </form>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>

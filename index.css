@@ -115,3 +115,7 @@ input:focus {
 .agree {
   color: #777676;
 }
+
+.checkBox {
+  margin: 20px 0;
+}
