@@ -13,19 +13,18 @@ var mailformat =
 
 signUpButton.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(email.value, password.value);
+  formValidation();
+});
 
-  if (
-    email.value === "" ||
-    password.value === "" ||
-    confirmPassword.value === ""
-  ) {
-    console.log("first");
+const formValidation = () => {
+  if (email.value === "") {
     email.classList.add("error");
-    password.classList.add("error");
-    confirmPassword.classList.add("error");
     emailErrorDiv.innerHTML = "Field Empty";
+  } else if (password.value === "") {
+    password.classList.add("error");
     passwordErrorDiv.innerHTML = "Field Empty";
+  } else if (confirmPassword.value === "") {
+    confirmPassword.classList.add("error");
     confirmPasswordErrorDiv.innerHTML = "Field Empty";
   } else if (password.value.length < 6) {
     password.classList.add("error");
@@ -41,4 +40,4 @@ signUpButton.addEventListener("click", (e) => {
     localStorage.setItem("email", email.value);
     window.location.replace("/");
   }
-});
+};
