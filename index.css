@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-  background: #303030;
+  background: #292929;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -21,21 +21,21 @@ input {
 }
 .form {
   padding: 30px 100px;
-  background: linear-gradient(145deg, #292929, #373737);
+  background: #292929;
   border-radius: 10px;
-  box-shadow: 9.91px 9.91px 15px #252525, -9.91px -9.91px 15px #3b3b3b;
+  box-shadow: 9.91px 9.91px 15px #252525, -9.91px -9.91px 15px #353535;
 }
 
 .name {
-  padding: 20px 20px;
+  padding: 20px 60px;
   width: 70%;
-  border: none;
-  border-radius: 22px;
-  color: #777676;
-  background: #303030;
-  border-radius: 10px;
-  box-shadow: inset 9.91px 9.91px 15px #252525,
-    inset -9.91px -9.91px 15px #3b3b3b;
+  background: #292929;
+  color: #ff7f50;
+  border: solid 2px #ff7f50;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #ff7f50;
   font-size: 15px;
   margin-top: 20px;
 }
@@ -61,15 +61,13 @@ input:focus {
 }
 
 .course-option {
-  padding: 10px 30px;
+  padding: 15px 30px;
   background: #303030;
   color: rgb(125, 125, 126);
   font-size: 15px;
   width: 80%;
-  border: none;
+  border: solid 1px #ff7f50;
   border-radius: 50px;
-  background: linear-gradient(145deg, #2b2b2b, #333333);
-  box-shadow: 14px 14px 28px #262626, -14px -14px 28px #3a3a3a;
 }
 
 .course-option:focus {
@@ -89,28 +87,30 @@ input:focus {
   border: none;
   font-size: 15px;
   border-radius: 50px;
-  color: #666565;
+  color: #252525;
   font-size: 17px;
-  background: linear-gradient(145deg, #292929, #373737);
+  background: #ff7f50;
   border-radius: 10px;
-  box-shadow: 9.91px 9.91px 15px #252525, -9.91px -9.91px 15px #3b3b3b;
   cursor: pointer;
+  width: 100%;
 }
 
 .button:hover {
-  background: #303030;
-  border-radius: 15%;
-  box-shadow: inset 12.31px 12.31px 15px #252525,
-    inset -12.31px -12.31px 15px #3b3b3b;
+  background: #ff6347;
+  border-radius: 10px;
 }
 
 .sign-up {
   font-size: 30px;
-  color: #777676;
+  color: #ff7f50;
 }
 
 .error {
-  border: solid 1px red;
+  border: solid 2px red;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-top: 10px;
 }
 
 .error-div {
@@ -118,9 +118,13 @@ input:focus {
 }
 
 .agree {
-  color: #777676;
+  color: #ff7f50;
 }
 
 .checkBox {
   margin: 20px 0;
+}
+
+label {
+  color: #ff7f50;
 }
