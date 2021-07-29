@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Form Validator</title>
   </head>
+  <script>
+    localStorage.getItem("email") === null &&
+      window.location.replace("./signup.html");
+  </script>
   <body>
     <div class="form-div">
       <form class="form">
